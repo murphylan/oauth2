@@ -2,13 +2,21 @@
   "configurations": [
     {
       "type": "java",
+      "name": "SecurityOauthApplication",
+      "request": "launch",
+      "mainClass": "com.academy.security.SecurityOauthApplication",
+      "projectName": "security-oauth2-authorization-server"
+    },
+    {
+      "type": "java",
       "name": "Spring Boot-SecurityOauthGithubApplication<security-oauth2-authorization-server>",
       "request": "launch",
       "cwd": "${workspaceFolder}",
       "mainClass": "com.academy.security.SecurityOauthGithubApplication",
       "projectName": "security-oauth2-authorization-server",
       "args": "",
-      "envFile": "${workspaceFolder}/.env"
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=51196 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=security-oauth2-authorization-server"
     },
     {
       "type": "java",
@@ -18,7 +26,8 @@
       "mainClass": "com.academy.security.SecurityOauthGithubApplication",
       "projectName": "security-oauth2-resource-server",
       "args": "",
-      "envFile": "${workspaceFolder}/.env"
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=54957 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=security-oauth2-resource-server"
     },
     {
       "type": "java",
@@ -28,7 +37,8 @@
       "mainClass": "com.academy.security.SecurityOauthApplication",
       "projectName": "security-oauth2-client",
       "args": "",
-      "envFile": "${workspaceFolder}/.env"
+      "envFile": "${workspaceFolder}/.env",
+      "vmArgs": " -Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.port=54970 -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Dspring.jmx.enabled=true -Djava.rmi.server.hostname=localhost -Dspring.application.admin.enabled=true -Dspring.boot.project.name=security-oauth2-client"
     }
   ]
 }
